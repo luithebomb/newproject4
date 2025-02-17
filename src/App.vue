@@ -50,10 +50,10 @@ const placeOrder = () => {
     </div>
 
     <div class="product-list">
-      <ProductItem v-for="product in products" :key="product.id" :product="product" @add-to-cart="addToCart" />
+      <ProductItem v-for="product in products" :key="product.id" :product="product" @add-to-cart="addToCart"></ProductItem>
     </div>
 
-    <ShoppingCart :cart="cart" @remove-item="removeFromCart" />
-    <Checkout :cart="cart" @place-order="placeOrder" />
+    <ShoppingCart :cart="cart" @remove-item="removeFromCart"></ShoppingCart>
+    <Checkout :cart="cart" @place-order="placeOrder"></Checkout>
   </div>
 </template>
